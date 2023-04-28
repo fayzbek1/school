@@ -1,0 +1,106 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+            <!-- Header Starts -->
+            <div class="row">
+               <div class="col-sm-12 p-0">
+                  <div class="main-header">
+                     <h4>Table</h4>
+                     <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                        <li class="breadcrumb-item">
+                           <a href="index.html">
+                              <i class="icofont icofont-home"></i>
+                           </a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#">Tables</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="basic-table.html">Basic Table</a>
+                        </li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+            <!-- Header end -->
+
+            <!-- Tables start -->
+            <!-- Row start -->
+            <div class="row">
+               <div class="col-sm-12">
+                  <!-- Basic Table starts -->
+                  <div class="card">
+                     <div class="card-header">
+                        <h5 class="card-header-text">students</h5>
+                     </div>
+                     <div class="card-block">
+                        <div class="row">
+                           <div class="col-sm-12 table-responsive">
+                              <table class="table">
+                                 <thead>
+                                   <tr>
+                                     <th scope="col">#</th>
+                                     <th scope="col">First name</th>
+                                     <th scope="col">Last name</th>
+                                     <th scope="col">Birth date</th>
+                                     <th scope="col">Country</th>
+                                     <th scope="col">city</th>                  
+                                     <th scope="col">Adress</th>
+                                     <th scope="col">class</th>
+                                     <th scope="col">actin</th>
+                   
+                                   </tr>
+                                 </thead>
+                               {% for student1b in student1b %}
+                                 <tbody>
+                                   <tr>
+                                     <th scope="row">{{ student1b.id }}</th>
+                                     <th scope="row">{{ student1b.first_name }}</th>
+                                     <td>{{ student1b.last_name }}</td>
+                                     <td>{{ student1b.birth_date }}</td>
+                                     <td>{{ student1b.country }}</td>
+                                     <td>{{ student1b.city }}</td>
+                                     <td>{{ student1b.adress }}</td>
+                                     <td>1B</td>
+                                     <td>
+                                       <a href="{% url 'delete1b' student1b.id %} " type=submit class="btn btn-danger btn-round" >delete</a>
+                                       <a href="{% url 'update1b' student1b.id %} " type=submit class="btn btn-primary btn-round" >update</a>
+                                     </td>
+                                   </tr>
+                                 </tbody>
+                               {% endfor %}
+                             </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Basic Table ends -->
+
+                  <!-- Striped Row Table starts -->\   <!-- Required Jqurey -->
+   <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
+   <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+   <script src="assets/plugins/tether/dist/js/tether.min.js"></script>
+
+   <!-- Required Fremwork -->
+   <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+   <!-- waves effects.js -->
+   <script src="assets/plugins/Waves/waves.min.js"></script>
+
+   <!-- Scrollbar JS-->
+   <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+   <script src="assets/plugins/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+
+   <!--classic JS-->
+   <script src="assets/plugins/classie/classie.js"></script>
+
+   <!-- notification -->
+   <script src="assets/plugins/notification/js/bootstrap-growl.min.js"></script>
+
+   <!-- custom js -->
+   <script type="text/javascript" src="assets/js/main.min.js"></script>
+   <script type="text/javascript" src="assets/pages/elements.js"></script>
+   <script src="assets/js/menu.min.js"></script>
+</body>
+
+</html>
+{% endblock %}

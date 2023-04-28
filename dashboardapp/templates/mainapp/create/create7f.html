@@ -1,0 +1,104 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<div  class="clearfix"></div>
+	
+<div class="content-wrapper">
+  <div class="container-fluid">
+
+  <div class="row mt-3">
+    <div class="col-lg-6">
+       <div class="card">
+         <div class="card-body">
+         <div class="card-title"></div>
+         <hr>
+         <form method="POST">
+         {% csrf_token %}  
+          <div class="form-group">
+           <label for="input-3">first name</label>
+           {% render_field form.first_name type="text" class="form-control" id="input-1" placeholder="Enter Your name" %}
+          </div>
+          <div class="form-group">
+            <label for="input-3">last name</label>
+           {% render_field form.last_name type="text" class="form-control" id="input-2" placeholder="Enter Your surname" %}
+          </div>
+           <div class="form-group">
+            <label for="input-4">birth date</label>
+            {% render_field form.birth_date type="date" class="form-control" id="input-3" placeholder="Enter Your birth date" %}
+           </div>
+           <div class="form-group">
+            <label for="input-5">country</label>
+            {% render_field form.country type="text" class="form-control" id="input-4" placeholder="Enter country" %}
+           </div>
+           <div class="form-group">
+            <label for="input-6">city</label>
+            {% render_field form.city type="text" class="form-control" id="input-5" placeholder="Confirm city" %}
+           </div>
+           <div class="form-group">
+            <label for="input-7">Address</label>
+            {% render_field form.adress type="text" class="form-control" id="input-4" placeholder="Enter Address" %}
+           </div>
+            <div class="form-group">
+              <label for="input-1">group</label>
+              {% render_field form.klass type="text" class="form-control" id="input-1" placeholder="change group" %}
+            </div>
+           <div class="form-group py-2">
+             <div class="icheck-material-white">
+            <input type="checkbox" id="user-checkbox1" checked=""/>
+            <label for="user-checkbox1">I Agree Terms & Conditions</label>
+            </div>
+           </div>
+           <div class="form-group">
+            <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Create </button>
+        </div>
+        </form>
+       </div>
+       </div>
+    </div>
+
+  </div><!--End Row-->
+
+<!--start overlay-->
+    <div class="overlay toggle-menu"></div>
+  <!--end overlay-->
+
+  </div>
+  <!-- End container-fluid-->
+  
+ </div><!--End content-wrapper-->
+ <!--Start Back To Top Button-->
+  <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+  <!--End Back To Top Button-->
+
+<!--Start footer-->
+<footer class="footer">
+    <div class="container">
+      <div class="text-center">
+        Copyright © 2018 Dashtreme Admin
+      </div>
+    </div>
+  </footer>
+<!--End footer-->
+ 
+</div><!--End wrapper--><!-- Bootstrap core JavaScript-->
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<!-- simplebar js -->
+<script src="{% static 'assets/plugins/simplebar/js/simplebar.js' %}"></script>
+<!-- sidebar-menu js -->
+<script src="{% static 'assets/js/sidebar-menu.js' %}"></script>
+<!-- loader scripts -->
+<script src="{% static 'assets/js/jquery.loading-indicator.js' %}"></script>
+<!-- Custom scripts -->
+<script src="{% static 'assets/js/app-script.js' %}"></script>
+<!-- Chart js -->
+
+<script src="{% static 'assets/plugins/Chart.js/Chart.min.js' %}"></script>
+<!-- Index js -->
+<script src="{% static 'assets/js/index.js' %}"></script>
+<body>
+<html>
+  {% endblock content %}
+  

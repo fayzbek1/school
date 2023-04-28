@@ -1,0 +1,67 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<div  class="clearfix"></div>
+	
+<div class="content-wrapper">
+  <div class="container-fluid">
+
+    <div class="card-body">
+      <form method="POST">
+        {% csrf_token %}
+        
+        <h5>
+          you are the one to delete this data</h5>
+        <div class="row">
+          
+          <div class="update ml-auto mr-auto">
+            <a href="{% url 'student-9B-t'%} " type=submit class="btn btn-danger btn-round" >No</a>
+            <button type="submit" class="btn btn-primary btn-round">delete date</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+<!--start overlay-->
+    <div class="overlay toggle-menu"></div>
+  <!--end overlay-->
+
+  </div>
+  <!-- End container-fluid-->
+  
+ </div><!--End content-wrapper-->
+ <!--Start Back To Top Button-->
+  <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+  <!--End Back To Top Button-->
+
+<!--Start footer-->
+<footer class="footer">
+    <div class="container">
+      <div class="text-center">
+        Copyright © 2018 Dashtreme Admin
+      </div>
+    </div>
+  </footer>
+<!--End footer-->
+ 
+</div><!--End wrapper--><!-- Bootstrap core JavaScript-->
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<!-- simplebar js -->
+<script src="{% static 'assets/plugins/simplebar/js/simplebar.js' %}"></script>
+<!-- sidebar-menu js -->
+<script src="{% static 'assets/js/sidebar-menu.js' %}"></script>
+<!-- loader scripts -->
+<script src="{% static 'assets/js/jquery.loading-indicator.js' %}"></script>
+<!-- Custom scripts -->
+<script src="{% static 'assets/js/app-script.js' %}"></script>
+<!-- Chart js -->
+
+<script src="{% static 'assets/plugins/Chart.js/Chart.min.js' %}"></script>
+<!-- Index js -->
+<script src="{% static 'assets/js/index.js' %}"></script>
+<body>
+<html>
+  {% endblock content %}
